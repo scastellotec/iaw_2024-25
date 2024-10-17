@@ -10,16 +10,20 @@
     
     <?php
         
-        // Recupero el valor de SESSION en caso de que existiera
+        // SIEMPRE Si voy a trabajar con session tengo que iniciar session_start()
+
+        // Si existe el valor en sesion tengo que recuperarlo de la session
+        // Se comprueba con isset()
         
-        // En esta variable guardo el numero de veces que se carga la pagina
+        // Si no existiera el valor, es la primera vez y tengo que dar un valor inicial
         $num_veces = 0;
 
-        // Incremento el numero de visitar
+        // En cualquier caso incremento el numero de visitas
         $num_veces++;
 
         // Guardo o actualizo el valor en SESSION
         
+        // Muestro un mensaje por pantalla para el usuario
         echo "Has cargado la pagina $num_veces";
     ?>
 
