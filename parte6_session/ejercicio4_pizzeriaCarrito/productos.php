@@ -6,6 +6,20 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Carrito</h1>
+    <?php
+        session_start();
+        if(isset($_SESSION["carrito"])){
+            $pizzasCompradas = $_SESSION["carrito"];
+            foreach ($pizzasCompradas as $pizza => $cantidad) {
+                echo "<p>$pizza x $cantidad</p>";
+            }
+        }else{
+            echo "<p>El carrito esta vacio</p>";
+        }
+
+    ?>
+
     <h1>Elige las pizzas que quieres comrpar</h1>
 
     <form action="addCarrito.php" method="GET">
