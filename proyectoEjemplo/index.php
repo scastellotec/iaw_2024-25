@@ -6,36 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Usuarios registrados</h1>
+    <h1>Comida china - Todo a 3€</h1>
     <?php
-        //1. Conectar a la BBDD
-        $conn = new mysqli("localhost", "root", "", "iaw_ejemplo");
+        // Me conecto a la BBDD
 
-        //2. Construir un SELECT y ejecutarlo
-        $sql = "SELECT * FROM productos";
-        $result = $conn->query($sql);
+        // Hago una consulta a todos los productos
 
-        //3. Recorrer los resultados y mostrarlos por pantalla
-        ?>
-        <form action="" method="">
-        <?php
-        while($row = $result->fetch_assoc()) {
-            // en 'nombre' es el nombre de la columna de la BBDD
-
-            ?> <input type="" name="<?php $row['ID'] ?>">
-
-            <?php
-            echo "<p>";
-            echo $row['ID'];
-            echo $row['Nombre']." - ";
-            echo $row['Correo']." - ";
-            echo $row['Contrasena']." - ";
-            echo $row['FechaRegistro'];
-            echo"</p>";
-        }
-
-        //4. Cerrar la conexino con la BBDD
-        $conn->close();
+        // Muestro de cada producto: Nombre, Descripcion, Imagen, Precio
     ?>
+    <h1>Login o registrarse:</h1>
+    <ul>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="registro.php">Registro</a></li>
+    </ul>
 </body>
 </html>
