@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+    include("util/msgsession.php");
+    ?>
     <!-- Genero un formulario para que el usuario escriba su
             nombre y contraseña -->
 </body>

@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+        include ("util/header.php");
+    ?>
     <h1>Comida china - Todo a 3€</h1>
     <?php
         // Me conecto a la BBDD
