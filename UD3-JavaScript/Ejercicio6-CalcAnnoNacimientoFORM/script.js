@@ -1,3 +1,15 @@
+let formulario = document.getElementById("formulario");
+formulario.addEventListener("submit",envioFormulario);
+
+function envioFormulario(e){
+    // Lo transforma a int para poder trabajar con el
+    valorCampoInput = parseInt(campoInput.value);
+    if(valorCampoInput < 2000){
+        e.preventDefault();
+    }
+}
+
+let campoInput = document.getElementById("inputAnno"); // Esto recoge todo la etiqueta del campo y el valor
 let botonCalcular = document.getElementById("btnCalcular");
 
 botonCalcular.addEventListener("click",calculaEdad);
@@ -7,7 +19,6 @@ function calculaEdad(){
     console.log("Comenzamos a calcular la edad ...");
     
     // Recoger el dato del formulario
-    let campoInput = document.getElementById("inputAnno"); // Esto recoge todo la etiqueta del campo y el valor
     console.log(campoInput);
     let valorCampoInput = campoInput.value; // Con esto solo recojo el valor escrito por el usuario
     console.log(valorCampoInput);
