@@ -30,6 +30,7 @@ let contenedor = document.getElementById("container")
 contenedor.addEventListener("click",pruebaEvento);
 
 function pruebaEvento(e){
+    console.log(e);
     console.log(e.target.getAttribute("data-color"));
     let colorTemporal = e.target.getAttribute("data-color");
     document.getElementById("cuerpo").setAttribute("style","background-color: "+colorTemporal);
