@@ -18,7 +18,7 @@ function guardar(){
     // La función parseInt(...) fuerza a que el dato sea leido como un entero
     let total = parseInt(document.getElementById("total").innerText); 
     // Muestra el tipo de dato de la variable
-    console.log(typeof total); 
+    console.log(typeof(total)); 
     total += cuenta;
     document.getElementById("total").innerText = total;
 
